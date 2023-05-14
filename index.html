@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Dojo Weather</h1>
+        <div class="three-cities">
+            <h3 class="city" onclick="weatherAlert()">Burbank</h3>
+            <h3 class="city" onclick="weatherAlert()">Chicago</h3>
+            <h3 class="city" onclick="weatherAlert()">Dallas</h3>
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="city-name-bar">
+                <h1>San Jose</h1>
+            <div class="city-name-bar-right">
+                <p>Show temperature in &emsp;</p>
+                <select name="tempdropdown" onchange="tempChange()">
+                    <option value="Fahrenheit">&deg;F</option>
+                    <option value="Celsius">&deg;C</option>
+                </select>
+            </div>
+        </div>
+        <div class="four-columns">
+            
+            <div class="column">
+                <p class="day">Today</p>
+                <img class="weather-icon" src="assets/some_rain.png" alt="some rain">
+                <p class="weather-report">some rain</p>
+                <div class="high-and-low-temp">
+                    <div class="high-temp">
+                        <p id="today-temp-high">75</p>
+                        <p>&deg;</p>
+                    </div>
+                    <div class="low-temp">
+                        <p id="today-temp-low">65</p>
+                        <p>&deg;</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <p class="day">Tomorrow</p>
+                <img class="weather-icon" src="assets/some_sun.png" alt="some sun">
+                <p class="weather-report">some sun</p>
+                <div class="high-and-low-temp">
+                    <div class="high-temp">
+                        <p id="tomorrow-temp-high">80</p>
+                        <p>&deg;</p>
+                    </div>
+                    <div class="low-temp">
+                        <p id="tomorrow-temp-low">66</p>
+                        <p>&deg;</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <p class="day">Friday</p>
+                <img class="weather-icon" src="assets/some_clouds.png" alt="some clouds">
+                <p class="weather-report">some clouds</p>
+                <div class="high-and-low-temp">
+                    <div class="high-temp">
+                        <p id="friday-temp-high">69</p>
+                        <p>&deg;</p>
+                    </div>
+                    <div class="low-temp">
+                        <p id="friday-temp-low">61</p>
+                        <p>&deg;</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <p class="day">Saturday</p>
+                <img class="weather-icon" src="assets/some_sun.png" alt="some sun">
+                <p class="weather-report">some sun</p>
+                <div class="high-and-low-temp">
+                    <div class="high-temp">
+                        <p id="saturday-temp-high">78</p>
+                        <p>&deg;</p>
+                    </div>
+                    <div class="low-temp">
+                        <p id="saturday-temp-low">70</p>
+                        <p>&deg;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-up">
+            <div class="pop-up-left-side">
+                <img class="pop-up-image" src="assets/cookie.png" alt="cookie">
+                <div class="pop-up-message">
+                    <h3>Stop! Cookie time</h3>
+                    <p>We use cookies (sadly not the edible ones) to personalize</p>
+                    <p>content and ads, to provide social media features and to
+                        analyse our traffic <a href="#">Read more...</a>
+                    </p>
+                </div>
+            </div>
+            <button id="pop-up-button" onclick="hide()">I accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
